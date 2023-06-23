@@ -18,7 +18,7 @@ public class Movie {
     private final int specialCode;
 
     /**
-     * Constructs a new Movie object with the provided title, desc, runng time, ticket price, and special code values.
+     * Constructs a new Movie object with the provided title, desc, running time, ticket price, and special code values.
      * @param title - the title of the movie
      * @param description - the description of the movie
      * @param runningTime - the duration of the movie
@@ -54,14 +54,14 @@ public class Movie {
     }
 
     /**
-     * @return original ticket price (before discount) of the movie
+     * @return original ticket price (before discount) of the movie i.e. $20.5
      */
     public BigDecimal getTicketPrice() {
         return ticketPrice;
     }
 
     /**
-     * @return special code of the movie to indicate whether movie is regular or special
+     * @return special code of the movie to indicate whether movie is regular or special (special code = 1)
      */
     public int getSpecialCode() {
         return specialCode;

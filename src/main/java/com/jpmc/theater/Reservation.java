@@ -57,6 +57,7 @@ public class Reservation {
 
     /**
      * @param audienceCount - setter to change the party size of reservation
+     * @throws IllegalArgumentException if the audience count is less than zero
      */
     public void setAudienceCount(int audienceCount) {
         if (audienceCount <= 0) {

@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 import java.time.LocalDateTime;
 
 /**
- * This class is representing the showing of a movie in a theater.
+ * This class represents the showing of a movie in a theater.
  * It holds the information about a specific movie being shown, including the movie itself,
  * the sequence of the showing within a day, and the start time of the showing.
  *
@@ -19,6 +19,7 @@ public class Showing {
 
     /**
      * Constructs a new Showing object with the provided movie, sequence of the day, and show start time.
+     * This constructor also creates an instance of the MovieDiscountCalculator
      * @param movie - the movie the showing is about
      * @param sequenceOfTheDay - the showing's sequence of the day (when the movie is shown in the day)
      * @param showStartTime - the start time of the showing

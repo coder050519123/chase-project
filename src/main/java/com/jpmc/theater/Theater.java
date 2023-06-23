@@ -50,6 +50,8 @@ public class Theater {
      * @param sequence - the selected showing sequence
      * @param ticketAmount - the requested party size of the reservation
      * @return the reservation object if all the input parameters are valid
+     * @throws IllegalArgumentException if the ticket amount is less than 1
+     * @throws IllegalStateException if the showing sequence cannot be found in the schedule
      */
     public Reservation createReservation(Customer customer, int sequence, int ticketAmount) {
         if (ticketAmount <= 0) {
@@ -75,7 +77,7 @@ public class Theater {
         System.out.println(LocalDate.now());
         System.out.println("===================================================");
         schedule.forEach(s ->
-                System.out.println(s.getSequenceOfTheDay() + ": " + s.getShowStartTime() + " " + s.getMovie().getTitle() + " " + humanReadableFormat(s.getMovie().getRunningTime()) + " $" + s.getMovie().getTicketPrice())
+                System.out.println(s.getSequenceOfTheDay() + ": " + s.getShowStartTime() + " " + s.getMovie().getTitle() + " " + convertMovieDurationToReadableFormat(s.getMovie().getRunningTime()) + " $" + s.getMovie().getTicketPrice())
         );
         System.out.println("===================================================");
     }
@@ -98,17 +100,17 @@ public class Theater {
     /**
      * Method to handle the movie's duration to be printed in a readable format
      */
-    public String humanReadableFormat(Duration duration) {
+    public String convertMovieDurationToReadableFormat(Duration duration) {
         long hour = duration.toHours();
         long remainingMin = duration.toMinutes() - TimeUnit.HOURS.toMinutes(duration.toHours());
 
-        return String.format("(%s hour%s %s minute%s)", hour, handlePlural(hour), remainingMin, handlePlural(remainingMin));
+        return String.format("(%s hour%s %s minute%s)", hour, handlePluralWords(hour), remainingMin, handlePluralWords(remainingMin));
     }
 
     /**
      * Method to add plurality to the duration of the movie
      */
-    private String handlePlural(long value) {
+    private String handlePluralWords(long value) {
         if (value == 1) {
             return "";
         }

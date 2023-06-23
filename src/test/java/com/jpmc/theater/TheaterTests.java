@@ -20,7 +20,7 @@ import java.time.LocalTime;
  */
 public class TheaterTests {
     /**
-     * PrintStream and ByteArrayOutputStream are used to test the System.out.println methods called in the class
+     * PrintStream and ByteArrayOutputStream are used to test the System.out.println methods called in the Theater class
      */
     private PrintStream originalSystemOut;
     private ByteArrayOutputStream outputStream;

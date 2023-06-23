@@ -85,7 +85,7 @@ public class MovieDiscountCalculator {
         LocalDateTime lowerBoundStartTime = LocalDateTime.of(LocalDate.now(), EARLY_SHOWING_LOWER_BOUND_HOUR);
         LocalDateTime upperBoundStartTime = LocalDateTime.of(LocalDate.now(), EARLY_SHOWING_UPPER_BOUND_HOUR);
         if (movieStartTime.isAfter(lowerBoundStartTime) && movieStartTime.isBefore(upperBoundStartTime)) {
-            BigDecimal earlyShowingDiscount = movie.getTicketPrice().multiply(EARLY_SHOWING_DISCOUNT_DECIMAL);
+            BigDecimal earlyShowingDiscount = movie.getTicketPrice().multiply(EARLY_SHOWING_DISCOUNT_DECIMAL); // 25% discount for movie shown in btwn 11am-4pm
             finalDiscount = earlyShowingDiscount.max(finalDiscount);
         }
 
