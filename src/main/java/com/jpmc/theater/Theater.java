@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * This class represents the theater containing a schedule of movie showings in the day.
  * The theater object holds a list of showings containing the respective movies.
  *
- * @author natashamartinas
+ * @author coder050519123
  */
 public class Theater {
     private List<Showing> schedule;
