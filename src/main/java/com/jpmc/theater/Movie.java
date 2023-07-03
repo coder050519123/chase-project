@@ -8,7 +8,7 @@ import java.util.Objects;
  * This is a class representing the Movie entity in a theater.
  * This class holds the information about a movie, including its title, description,
  * running time, ticket price, and special code.
- * @author natashamartinas
+ * @author coder050519123
  */
 public class Movie {
     private final String title;
