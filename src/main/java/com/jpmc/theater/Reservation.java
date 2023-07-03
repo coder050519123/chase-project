@@ -8,7 +8,7 @@ import java.math.RoundingMode;
  * It holds information on the customer, the showing details,
  * and the number of audience in this specific reservation party.
  * This class also calculates the total reservation fee for the showing chosen.
- * @author natashamartinas
+ * @author coder050519123
  */
 public class Reservation {
     private final Customer customer;
