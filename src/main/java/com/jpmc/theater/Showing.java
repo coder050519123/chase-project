@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
  * It holds the information about a specific movie being shown, including the movie itself,
  * the sequence of the showing within a day, and the start time of the showing.
  *
- * @author natashamartinas
+ * @author coder050519123
  */
 public class Showing {
     private final Movie movie;
