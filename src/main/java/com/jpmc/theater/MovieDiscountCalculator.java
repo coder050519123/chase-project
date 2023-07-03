@@ -11,7 +11,7 @@ import java.time.LocalTime;
  * The ticket discounts are based on special movie codes, the showing sequence of the day, and the time of the movie.
  * If a movie is eligible for multiple discounts, only the biggest will be chosen at the very end.
  *
- * @author natashamartinas
+ * @author coder050519123
  */
 public class MovieDiscountCalculator {
     /**
