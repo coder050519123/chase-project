@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * This class represents a customer object for the theater.
  * It holds the customer's name and id used for record keeping.
- * @author natashamartinas
+ * @author coder050519123
  */
 public class Customer {
     private String name;
